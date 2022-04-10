@@ -1,0 +1,26 @@
+{
+  "name": "fuck-gridman",
+  "version": "1.0.0",
+  "description": "大学网格员统计名单工具",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "fuck": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lmmmmmm-bb/Fuck-Gridman.git"
+  },
+  "keywords": [
+    "util"
+  ],
+  "author": "_lmmmmmm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lmmmmmm-bb/Fuck-Gridman/issues"
+  },
+  "homepage": "https://github.com/Lmmmmmm-bb/Fuck-Gridman#readme",
+  "dependencies": {
+    "node-xlsx": "^0.21.0"
+  }
+}
