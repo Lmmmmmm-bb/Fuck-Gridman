@@ -1,3 +1,7 @@
 node_modules
 
 *.xlsx
+*.txt
+
+!header_demo.xlsx
+!no_header_demo.xlsx
