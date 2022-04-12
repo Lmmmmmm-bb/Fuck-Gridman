@@ -1,15 +1,19 @@
+import { readWechatTxt, compare } from "./file.js";
 import { excelParser } from "./sheet.js";
 
 const hasHeaderDemo = excelParser({
   index: '姓名',
   hasHeader: true,
-  path: './list.xlsx',
+  path: './header_demo.xlsx',
 });
 
 const notHeaderDemo = excelParser({
   index: '2',
   hasHeader: false,
-  path: './list2.xlsx',
+  path: './no_header_demo.xlsx',
 })
 
-console.log(hasHeaderDemo, notHeaderDemo);
+const [current] = readWechatTxt('./demo.txt');
+
+const [match, error] = compare(hasHeaderDemo, current);
+console.log({ match, error });
