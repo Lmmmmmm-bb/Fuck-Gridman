@@ -1,11 +1,17 @@
 import XlsxParser from 'node-xlsx';
 
+// 默认解析参数
 const defaultOptions = {
   index: 0, // 列名
   hasHeader: true, // Excel 是否有表头
   path: './list.xlsx', // Excel 文件路径
 };
 
+/**
+ * 解析 Excel 文件
+ * @param {object} options Excel 解析参数
+ * @returns {string[]} Excel 解析结果
+ */
 export const excelParser = (options = defaultOptions) => {
   const [sheet] = XlsxParser.parse(options.path);
 
