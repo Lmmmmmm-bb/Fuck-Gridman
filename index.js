@@ -18,5 +18,5 @@ const notHeaderDemo = excelParser({
 // current 为接龙的名单
 const [current] = readWechatTxt('./example/demo.txt');
 
-const { match, dismatch, duplicate } = compare(hasHeaderDemo, current);
-console.log({ match, dismatch, duplicate });
+const { match, dismatch } = compare(hasHeaderDemo, current);
+console.log({ match, dismatch });
