@@ -1,12 +1,14 @@
 import { readWechatTxt, compare } from "./file.js";
 import { excelParser } from "./sheet.js";
 
+// 有表头的 Excel 文件
 const hasHeaderDemo = excelParser({
   index: '姓名',
   hasHeader: true,
   path: './header_demo.xlsx',
 });
 
+// 无表头的 Excel 文件
 const notHeaderDemo = excelParser({
   index: '2',
   hasHeader: false,
