@@ -5,17 +5,18 @@ import { excelParser } from "./sheet.js";
 const hasHeaderDemo = excelParser({
   index: '姓名',
   hasHeader: true,
-  path: './header_demo.xlsx',
+  path: './example/header_demo.xlsx',
 });
 
 // 无表头的 Excel 文件
 const notHeaderDemo = excelParser({
   index: '2',
   hasHeader: false,
-  path: './no_header_demo.xlsx',
+  path: './example/no_header_demo.xlsx',
 })
 
-const [current] = readWechatTxt('./demo.txt');
+// current 为接龙的名单
+const [current] = readWechatTxt('./example/demo.txt');
 
 const { match, dismatch, duplicate } = compare(hasHeaderDemo, current);
 console.log({ match, dismatch, duplicate });
