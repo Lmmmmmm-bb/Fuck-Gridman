@@ -15,5 +15,5 @@ const notHeaderDemo = excelParser({
 
 const [current] = readWechatTxt('./demo.txt');
 
-const { match, dismatch } = compare(hasHeaderDemo, current);
-console.log({ match, dismatch });
+const { match, dismatch, duplicate } = compare(hasHeaderDemo, current);
+console.log({ match, dismatch, duplicate });
