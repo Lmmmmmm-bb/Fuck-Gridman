@@ -1,5 +1,6 @@
-import { readWechatTxt, compare } from "./file.js";
+import { compare } from "./file.js";
 import { excelParser } from "./sheet.js";
+import { readWechatTxt } from './wechat.js';
 
 // 有表头的 Excel 文件
 const hasHeaderDemo = excelParser({
