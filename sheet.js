@@ -13,10 +13,11 @@ const defaultOptions = {
  * @returns {string[]} Excel 解析结果
  */
 export const excelParser = (options = defaultOptions) => {
-  const [sheet] = XlsxParser.parse(options.path);
+  const { index, hasHeader, path } = { ...defaultOptions, ...options };
+  const [sheet] = XlsxParser.parse(path);
 
   let source;
-  if (options.hasHeader) {
+  if (hasHeader) {
     const [h, ...rest] = sheet.data;
     source = h.reduce(
       (prev, current) => ({ ...prev, [current]: [] }),
@@ -35,5 +36,5 @@ export const excelParser = (options = defaultOptions) => {
       item.forEach(((val, index) => source[index].push(val)))
     );
   }
-  return source[options.index];
+  return source[index];
 }
